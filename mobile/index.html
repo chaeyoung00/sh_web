@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"> 
+    <meta name="format-detection" content="telephone=no, address=no, email=no">
+    <title>mobile</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="http://code.jquery.com/jquery-3.6.1.js"></script>
+    <script>
+        $(function(){
+            $('.toggle').on('click',function(){
+                $(this).toggleClass('on');
+                $('.gnb').toggleClass('on');
+            });
+            $('.gnb>.gnb1>ul>li').on('mouseenter',function(){
+					$('.gnb>.gnb1>ul>li').removeClass('active');
+					$(this).addClass('active');
+				    $('.sub').stop().fadeOut(250);  	
+					$(this).children('.sub').stop().fadeIn(250);
+			});
+        });
+
+    </script>
+</head>
+<body>
+    <header id="main_header">
+        <h1>신한은행</h1>
+        <button type="button" class="toggle">
+            <span class="bar1"></span>
+            <span class="bar2"></span>
+            <span class="bar3"></span>
+            <span class="sr_only">Toggle Navigation</span>
+        </button>
+        <nav class="gnb">
+            <div class="header">
+                <div class="info_wrap">
+                    <p>신한 모바일 홈페이지 방문을 환영합니다.</p>
+                    <ul class="quick">
+                        <li><a href="#">영업점안내</a></li>
+                        <li><a href="#">신한 SOL</a></li>
+                        <li><a href="#">챗봇 상담</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="gnb1">
+            <ul>
+                <li class="active">
+                    <a href="#">간편뱅킹</a>
+                    <div class="sub">
+                        <span>간편뱅킹</span>
+                        <ul>
+                            <li><a href="#">계좌조회</a></li>
+                            <li><a href="#">다른기관 계좌 출금결과 조회</a></li>
+                            <li><a href="#">입출금 계좌개설</a></li>
+                            <li><a href="#">다른기관 계좌 등록</a></li>
+                            <li><a href="#">카드신청</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a href="#">상품몰</a>
+                    <div class="sub">
+                        <span>상품몰</span>
+                        <ul>
+                            <li><a href="#">예금/신탁</a></li>
+                            <li><a href="#">대출</a></li>
+                            <li><a href="#">펀드</a></li>
+                            <li><a href="#">외환</a></li>
+                            <li><a href="#">퇴직연금</a></li>
+                            <li><a href="#">보험/공제</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a href="#">인증안내</a>
+                    <div class="sub">
+                        <span>인증안내</span>
+                        <ul>
+                            <li><a href="#">금융인증서</a></li>
+                            <li><a href="#">공동인증서</a></li>
+                            <li><a href="#">신한인증서</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a href="#">유용한 정보</a>
+                    <div class="sub">
+                        <span>유용한 정보</span>
+                        <ul>
+                            <li><a href="#">새소식</a></li>
+                            <li><a href="#">이벤트</a></li>
+                            <li><a href="#">신한APP마켓</a></li>
+                            <li><a href="#">인터넷뱅킹 FAQ</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a href="#">고객센터</a>
+                    <div class="sub">
+                        <span>고객센터</span>
+                        <ul>
+                            <li><a href="#">고객센터 전체보기</a></li>
+                            <li><a href="#">상담하기</a></li>
+                            <li><a href="#">자료실</a></li>
+                            <li><a href="#">자주하는 질문</a></li>
+                            <li><a href="#">민원접수</a></li>
+                            <li><a href="#">이용시간/수수료</a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        </nav>
+    </header>
+    <main id="main_container">
+        <section class="main_visual">
+            <div class="banner">
+                <img src="../images/mobile_banner.png" alt="">
+            </div>
+        </section>
+        <section class="btns_menu">
+            <div class="btn">
+                <ul>
+                    <li><a href="#">계좌개설</a></li>
+                    <li><a href="#">계좌조회</a></li>
+                    <li><a href="#">카드신청</a></li>
+                </ul>
+            </div>
+        </section>
+        <section class="map">
+            <strong>지점찾기</strong>
+            <p>가까운 지점을 찾아보세요.</p>
+            <span>map</span>
+        </section>
+        <section class="exchange">
+            <h3>오늘의 환율</h3>
+            <div class="today_list">
+                <ul>
+                    <li>
+                        <a href="#">USD</a>
+                        <p>1,437.00</p>
+                    </li>
+                    <li>
+                        <a href="#">JPY</a>
+                        <p>993.98</p>
+                    </li>
+                    <li>
+                        <a href="#">EUR</a>
+                        <p>1,400.78</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="quick">
+                <ul>
+                    <li><a href="#">우대율</a></li>
+                    <li><a href="#">환율상세</a></li>
+                </ul>
+            </div>
+        </section>
+    </main>
+    <footer id="main_footer">
+        <div class="top">
+            <ul>
+                <li><a href="#">고객센터</a></li>
+                <li><a href="#">챗봇상담</a></li>
+                <li><a href="#">신한지킴이</a></li>
+                <li><a href="#">pc버전</a></li>
+            </ul>
+        </div>
+        <div class="footer_menu">
+            <ul>
+                <li><a href="#"><strong>금융소비자보호</strong></a></li>
+                <li><a href="#"><strong>개인정보처리방침</strong></a></li>
+                <li><a href="#"><strong>신용정보활용체제</strong></a></li>
+            </ul>
+        </div>
+        <div class="footer_bottom">
+            <p>Copyright&copy;Shinhan Bank</p>
+        </div>
+    </footer>
+</body>
+</html>
